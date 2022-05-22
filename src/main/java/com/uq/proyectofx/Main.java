@@ -21,6 +21,7 @@ public class Main extends Application {
         //stage.getIcons().add(image);
         stage.show();
         stage.setResizable(false);
+
     }
 
     public static void main(String[] args) {
