@@ -8,6 +8,7 @@ module com.uq.proyectofx {
     requires validatorfx;
     requires org.kordamp.ikonli.javafx;
     requires eu.hansolo.tilesfx;
+    requires java.desktop;
 
     opens com.uq.proyectofx to javafx.fxml;
     exports com.uq.proyectofx;
