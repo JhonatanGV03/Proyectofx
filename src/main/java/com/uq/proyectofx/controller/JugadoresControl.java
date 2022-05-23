@@ -7,11 +7,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class JugadoresControl {
     @FXML
@@ -31,6 +33,8 @@ public class JugadoresControl {
 
     @FXML
     void jugar(ActionEvent event) {
+
+        Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/uq/proyectofx/imgs/pngwing.com.png")));
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/uq/proyectofx/juego.fxml"));
         Parent root = null;
         try {
@@ -44,6 +48,7 @@ public class JugadoresControl {
         stage.setScene(scene);
         stage.setTitle("Serpientes y Escaleras");
         stage.setResizable(false);
+        stage.getIcons().add(image);
         stage.show();
 
         Stage stage2 = (Stage) this.btnJugar.getScene().getWindow();

@@ -6,11 +6,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class InicioControl {
     @FXML
@@ -20,6 +22,7 @@ public class InicioControl {
     @FXML
     void jugadores(ActionEvent event) throws IOException {
 
+        Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/uq/proyectofx/imgs/pngwing.com.png")));
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/uq/proyectofx/jugadores.fxml"));
         Parent root = fxmlLoader.load();
         JugadoresControl jugadoresControl = fxmlLoader.getController();
@@ -28,6 +31,7 @@ public class InicioControl {
         stage.setScene(scene);
         stage.setTitle("Serpientes y Escaleras");
         stage.setResizable(false);
+        stage.getIcons().add(image);
         stage.show();
 
         Stage stage2 = (Stage) this.btnJugador.getScene().getWindow();
