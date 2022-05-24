@@ -14,15 +14,15 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/uq/proyectofx/imgs/pngwing.com.png")));
+
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("inicio.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
 
         stage.setTitle("Serpientes y Escaleras");
         stage.setScene(scene);
         stage.getIcons().add(image);
-        stage.show();
-
         stage.setResizable(false);
+        stage.show();
 
     }
 
@@ -37,10 +37,11 @@ public class Main extends Application {
         String s2 = tablero.toString2();
         System.out.println(s2);
 
+        /*
         //Prueba de dado
         Dado dado = new Dado();
         for(int i=0; i<10; i++){
             System.out.println(dado.lanzar());
-        }
+        }  */
     }
 }
