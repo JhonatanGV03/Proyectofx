@@ -1,6 +1,7 @@
 package com.uq.proyectofx;
 
 import com.uq.proyectofx.logic.Dado;
+import com.uq.proyectofx.logic.Jugador;
 import com.uq.proyectofx.logic.Tablero;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -36,7 +37,6 @@ public class Main extends Application {
         System.out.println(s);
         String s2 = tablero.toString2();
         System.out.println(s2);
-
         /*
         //Prueba de dado
         Dado dado = new Dado();
