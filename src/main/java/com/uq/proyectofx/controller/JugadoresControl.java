@@ -37,7 +37,7 @@ public class JugadoresControl {
     //OnAction
     @FXML
     void saveNombre1(ActionEvent event) {
-        jugador1.setNombre(nom1.getTypeSelector());
+        jugador1.setNombre(nom1.getText());
         nom2.requestFocus();
         System.out.println("J1: "+jugador1.getNombre());
     }
