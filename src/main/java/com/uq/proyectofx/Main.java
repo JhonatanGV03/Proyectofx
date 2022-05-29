@@ -1,10 +1,12 @@
 package com.uq.proyectofx;
 
+import com.uq.proyectofx.controller.JuegoControl;
 import com.uq.proyectofx.logic.Dado;
 import com.uq.proyectofx.logic.Jugador;
 import com.uq.proyectofx.logic.Tablero;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
@@ -14,6 +16,7 @@ import java.util.Objects;
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+        //Pantalla de inicio
         Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/uq/proyectofx/imgs/pngwing.com.png")));
 
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("inicio.fxml"));
@@ -24,6 +27,26 @@ public class Main extends Application {
         stage.getIcons().add(image);
         stage.setResizable(false);
         stage.show();
+
+        //Pantalla de juego para pruebas
+        /*
+        Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/uq/proyectofx/imgs/pngwing.com.png")));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/uq/proyectofx/juego.fxml"));
+        Parent root;
+        try {
+            root = fxmlLoader.load();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        JuegoControl juegoControl = fxmlLoader.getController();
+        Scene scene = new Scene(root);
+        //Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle("Serpientes y Escaleras");
+        stage.setResizable(false);
+        stage.getIcons().add(image);
+        stage.show();
+         */
 
     }
 

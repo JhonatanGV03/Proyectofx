@@ -17,10 +17,10 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class JugadoresControl {
-    Jugador jugador1 = new Jugador();
-    Jugador jugador2 = new Jugador();
-    Jugador jugador3 = new Jugador();
-    Jugador jugador4 = new Jugador();
+    private Jugador jugador1 = new Jugador();
+    private Jugador jugador2 = new Jugador();
+    private Jugador jugador3 = new Jugador();
+    private Jugador jugador4 = new Jugador();
 
     //IDs
     @FXML
@@ -66,7 +66,7 @@ public class JugadoresControl {
     }
     @FXML
     void jugar(ActionEvent event) {
-
+        //Se carga la ventana de juego.
         Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/uq/proyectofx/imgs/pngwing.com.png")));
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/uq/proyectofx/juego.fxml"));
         Parent root;
