@@ -15,13 +15,17 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class InicioControl {
+
+    //IDs
     @FXML
     private Button btnJugador;
     @FXML
     private Button btnSalir;
+
+    //OnAction
     @FXML
     void jugadores(ActionEvent event) throws IOException {
-
+        //Pantalla de inicio
         Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/uq/proyectofx/imgs/pngwing.com.png")));
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/uq/proyectofx/jugadores.fxml"));
         Parent root = fxmlLoader.load();
@@ -42,7 +46,6 @@ public class InicioControl {
         Stage stage2 = (Stage) this.btnSalir.getScene().getWindow();
         stage2.close();
     }
-
     @FXML
     void teclaSalir(KeyEvent event) {
         if(event.getCode() == KeyCode.ESCAPE){

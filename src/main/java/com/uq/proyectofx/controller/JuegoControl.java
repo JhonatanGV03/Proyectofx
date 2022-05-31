@@ -1,6 +1,7 @@
 package com.uq.proyectofx.controller;
 
 import com.uq.proyectofx.logic.Dado;
+import com.uq.proyectofx.logic.Jugador;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
@@ -16,6 +17,7 @@ public class JuegoControl {
     }
     public void initialize() {
         llenarGrid();
+
     }
 
     //Ids
@@ -38,6 +40,10 @@ public class JuegoControl {
 
 
     //Variables
+    private Jugador jugador1 = new Jugador();
+    private Jugador jugador2 = new Jugador();
+    private Jugador jugador3 = new Jugador();
+    private Jugador jugador4 = new Jugador();
     private int valorDado = 0;
     private int valorDado2 = 0;//Se usa despues para el movimiento.
 
@@ -69,21 +75,17 @@ public class JuegoControl {
     }
 
     //Metodos para llenar los labels con los nombres de los jugadores
-    public void setNomF1(String nomF1) {
-        this.nomF1.setText(nomF1);
+    public void llenarNombres(String nom1, String nom2, String nom3, String nom4){
+        nomF1.setText(nom1);
+        nomF2.setText(nom2);
+        nomF3.setText(nom3);
+        nomF4.setText(nom4);
+        jugador1.setNombre(nom1);
+        jugador2.setNombre(nom2);
+        jugador3.setNombre(nom3);
+        jugador4.setNombre(nom4);
     }
 
-    public void setNomF2(String nomF2) {
-        this.nomF2.setText(nomF2);
-    }
-
-    public void setNomF3(String nomF3) {
-        this.nomF3.setText(nomF3);
-    }
-
-    public void setNomF4(String nomF4) {
-        this.nomF4.setText(nomF4);
-    }
 
     //OnAction
     @FXML
@@ -100,7 +102,7 @@ public class JuegoControl {
     @FXML
     void salirJuego(KeyEvent event) {
         if(event.getCode() == KeyCode.ESCAPE){
-            System.exit(0);         //Si se presiona la tecla escape se cierra la ventana.
+            System.exit(0);     //Si se presiona la tecla escape se cierra la ventana.
         }
     }
 }

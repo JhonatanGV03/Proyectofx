@@ -1,6 +1,5 @@
 package com.uq.proyectofx.controller;
 
-import com.uq.proyectofx.logic.Jugador;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,10 +16,10 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class JugadoresControl {
-    private Jugador jugador1 = new Jugador();
-    private Jugador jugador2 = new Jugador();
-    private Jugador jugador3 = new Jugador();
-    private Jugador jugador4 = new Jugador();
+    private String nombre1 = "";
+    private String nombre2 = "";
+    private String nombre3 = "";
+    private String nombre4 = "";
 
     //IDs
     @FXML
@@ -37,32 +36,32 @@ public class JugadoresControl {
     //OnAction
     @FXML
     void saveNombre1(ActionEvent event) {
-        jugador1.setNombre(nom1.getText());
+        nombre1 = nom1.getText();
         nom2.requestFocus();
-        System.out.println("J1: "+jugador1.getNombre());
+        System.out.println("J1: "+nombre1);
     }
     @FXML
     void saveNombre2(ActionEvent event) {
-        jugador2.setNombre(nom2.getText());
+        nombre2 = nom2.getText();
         nom3.requestFocus();
 
-        System.out.println("J2: "+jugador2.getNombre());
+        System.out.println("J2: "+nombre2);
 
     }
     @FXML
     void saveNombre3(ActionEvent event) {
-        jugador3.setNombre(nom3.getText());
+       nombre3 = nom3.getText();
         nom4.requestFocus();
 
-        System.out.println("J3: "+jugador3.getNombre());
+        System.out.println("J3: "+nombre3);
 
     }
     @FXML
     void saveNombre4(ActionEvent event) {
-        jugador4.setNombre(nom4.getText());
+        nombre4 = nom4.getText();
         btnJugar.requestFocus();
 
-        System.out.println("J4: "+jugador4.getNombre());
+        System.out.println("J4: "+nombre4);
     }
     @FXML
     void jugar(ActionEvent event) {
@@ -85,10 +84,7 @@ public class JugadoresControl {
         stage.show();
 
         //Enviar nombres a juegoControl
-        juegoControl.setNomF1(jugador1.getNombre());
-        juegoControl.setNomF2(jugador2.getNombre());
-        juegoControl.setNomF3(jugador3.getNombre());
-        juegoControl.setNomF4(jugador4.getNombre());
+        juegoControl.llenarNombres(nombre1, nombre2, nombre3, nombre4);
 
         Stage stage2 = (Stage) this.btnJugar.getScene().getWindow();
         stage2.close();
