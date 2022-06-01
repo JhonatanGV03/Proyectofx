@@ -3,12 +3,11 @@ package com.uq.proyectofx.logic;
 public class Jugador {
     private String nombre;
     private int turno;
-    private int[][]posicion;
+    private int posicion;
 
     public Jugador(){
-        this.nombre = "";
-        this.turno = 0;
-        this.posicion = new int[8][8];
+        this.nombre = ".";
+        this.posicion = 0;
     }
 
     public String setNombre(String nombre){
@@ -19,19 +18,11 @@ public class Jugador {
         return nombre;
     }
 
-    public int getTurno() {
-        return turno;
-    }
-
-    public void setTurno(int turno) {
-        this.turno = turno;
-    }
-
-    public int[][] getPosicion() {
+    public int getPosicion() {
         return posicion;
     }
 
-    public void setPosicion(int[][] posicion) {
+    public void setPosicion(int posicion) {
         this.posicion = posicion;
     }
 }

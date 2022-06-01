@@ -21,10 +21,12 @@ public class Dado {
         Image cinco = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/uq/proyectofx/imgs/Dado5.png")));
         Image seis = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/uq/proyectofx/imgs/Dado6.png")));
 
-        Image dado = uno;
+        Image def = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/uq/proyectofx/imgs/default2.png")));
+        Image dado;
         switch (valor) {
             case 1:
-                break;
+                dado = uno;
+            break;
             case 2:
                 dado = dos;
                 break;
@@ -41,7 +43,7 @@ public class Dado {
                 dado = seis;
                 break;
             default:
-                dado = null;
+                dado = def;
                 break;
         }
         return dado;

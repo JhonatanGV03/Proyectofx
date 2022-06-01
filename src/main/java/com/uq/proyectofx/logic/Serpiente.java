@@ -1,12 +1,18 @@
 package com.uq.proyectofx.logic;
 
 public class Serpiente  {
-    private final int inicioS;
-    private final int finS;
+    private final int posInicio;
+    private final int posFinal;
 
-    public Serpiente(int inicioS){
-        this.inicioS = inicioS;
-        this.finS = inicioS * (-1);
+    public Serpiente(int posInicio, int posFinal) {
+        this.posInicio = posInicio;
+        this.posFinal = posFinal;
     }
 
+    public int getPosInicio() {
+        return posInicio;
+    }
+    public int getPosFinal() {
+        return posFinal;
+    }
 }

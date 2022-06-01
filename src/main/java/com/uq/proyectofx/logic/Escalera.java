@@ -1,24 +1,21 @@
 package com.uq.proyectofx.logic;
 
 public class Escalera {
-    private final int inicioE;
-    private final int finE;
+    private final int posInicio;
+    private final int posFinal;
 
-    public Escalera(int inicioE, int finE) {
-        this.inicioE = inicioE;
-        this.finE = finE;
+    public Escalera(int posInicio, int posFinal) {
+        this.posInicio = posInicio;
+        this.posFinal = posFinal;
     }
 
-    public int getInicioE() {
-        return inicioE;
+    public int getPosInicio() {
+        return posInicio;
     }
-    public int getFinE() {
-        return finE;
+    public int getPosFinal() {
+        return posFinal;
     }
 
     //moverEscalera no sirve
-    public void moverEscalera(int posicionF, int fila, int columna){
-        int cont = 0;
 
-    }
 }
