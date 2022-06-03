@@ -11,17 +11,8 @@
 <?import javafx.scene.shape.Line?>
 
 <AnchorPane onKeyPressed="#salirJuego" prefHeight="423.0" prefWidth="646.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uq.proyectofx.controller.JuegoControl">
-    <ImageView fitHeight="181.0" fitWidth="184.0" layoutX="12.5" layoutY="32.5" pickOnBounds="true" preserveRatio="true">
-        <Image url="@imgs/t1.jpg" />
-    </ImageView>
-    <ImageView fitHeight="181.0" fitWidth="182.0" layoutX="196.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
-        <Image url="@imgs/t2.jpg" />
-    </ImageView>
-    <ImageView fitHeight="181.0" fitWidth="181.0" layoutX="14.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true">
-        <Image url="@imgs/t4.jpg" />
-    </ImageView>
-    <ImageView fitHeight="181.0" fitWidth="191.0" layoutX="196.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true">
-        <Image url="@imgs/t3.jpg" />
+    <ImageView fitHeight="367.0" fitWidth="366.0" layoutX="14.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@imgs/tabla1.png" />
     </ImageView>
     <GridPane fx:id="tablaGrid" layoutX="13.0" layoutY="33.0" prefHeight="360.0" prefWidth="366.0">
         <columnConstraints>
