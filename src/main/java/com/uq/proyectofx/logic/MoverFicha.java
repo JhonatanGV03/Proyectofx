@@ -30,11 +30,19 @@ public class MoverFicha {
     //Metodos
     public int calcularPosFinal (){
 
-        if (posInicial <= 57 && posInicial >= 0){
-            posFinal = posInicial + valorDado1 + valorDado2;
+        if (posInicial < 57){
+            if ((posInicial + valorDado1 + valorDado2) > 63){
+                posFinal = posInicial + valorDado1;
+            } else {
+                posFinal = posInicial + valorDado1 + valorDado2;
+            }
 
-        } else if (posInicial > 57 && posInicial <64){
+        } else {
             posFinal = posInicial + valorDado1;
+            if (posFinal > 63){
+                posFinal = posInicial;
+            }
+
         }
         return posFinal;
     }
@@ -63,5 +71,6 @@ public class MoverFicha {
     public void moverFicha(){
         jugador.setPosicion(determinarPosFinal());
     }
+
 
 }

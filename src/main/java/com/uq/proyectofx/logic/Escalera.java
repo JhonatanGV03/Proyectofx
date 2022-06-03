@@ -16,6 +16,5 @@ public class Escalera {
         return posFinal;
     }
 
-    //moverEscalera no sirve
 
 }

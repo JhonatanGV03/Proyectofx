@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane onKeyPressed="#salirVen" prefHeight="400.0" prefWidth="600.0"
-            xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.uq.proyectofx.controller.JugadoresControl">
-   <Button fx:id="btnJugar" layoutX="264.0" layoutY="311.0" mnemonicParsing="false" onAction="#jugar" prefHeight="39.0"
-           prefWidth="72.0" text="Jugar!!"/>
+<AnchorPane onKeyPressed="#salirVen" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uq.proyectofx.controller.JugadoresControl">
+   <Button fx:id="btnJugar" layoutX="264.0" layoutY="311.0" mnemonicParsing="false" onAction="#jugar" prefHeight="39.0" prefWidth="72.0" text="Jugar!!" />
    <ImageView fitHeight="72.0" fitWidth="87.0" layoutX="57.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
-      <Image url="@imgs/person_64px.png"/>
+      <Image url="@imgs/j1.png" />
    </ImageView>
    <ImageView fitHeight="72.0" fitWidth="87.0" layoutX="322.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
-      <Image url="@imgs/person_64px.png"/>
+      <Image url="@imgs/J2.png" />
    </ImageView>
    <ImageView fitHeight="72.0" fitWidth="87.0" layoutX="57.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
-      <Image url="@imgs/person_64px.png"/>
+      <Image url="@imgs/J3.png" />
    </ImageView>
    <ImageView fitHeight="72.0" fitWidth="87.0" layoutX="322.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
-      <Image url="@imgs/person_64px.png"/>
+      <Image url="@imgs/J4.png" />
    </ImageView>
-   <Label layoutX="129.0" layoutY="61.0" text="Ingrese el nombre del jugador 1"/>
-   <Label layoutX="394.0" layoutY="61.0" text="Ingrese el nombre del jugador 2"/>
-   <Label layoutX="394.0" layoutY="192.0" text="Ingrese el nombre del jugador 4"/>
-   <Label layoutX="129.0" layoutY="192.0" text="Ingrese el nombre del jugador 3"/>
-   <TextField fx:id="nom1" layoutX="129.0" layoutY="78.0" onAction="#saveNombre1" promptText="Nombre: "/>
-   <TextField fx:id="nom2" layoutX="394.0" layoutY="78.0" onAction="#saveNombre2" promptText="Nombre: "/>
-   <TextField fx:id="nom4" layoutX="394.0" layoutY="212.0" onAction="#saveNombre4" promptText="Nombre: "/>
-   <TextField fx:id="nom3" layoutX="129.0" layoutY="212.0" onAction="#saveNombre3" promptText="Nombre: "/>
-   <Label layoutX="355.0" layoutY="369.0" text="Nota: Para salir de la partida prescione ESC"/>
+   <Label layoutX="129.0" layoutY="61.0" text="Ingrese el nombre del jugador 1" />
+   <Label layoutX="394.0" layoutY="61.0" text="Ingrese el nombre del jugador 2" />
+   <Label layoutX="394.0" layoutY="192.0" text="Ingrese el nombre del jugador 4" />
+   <Label layoutX="129.0" layoutY="192.0" text="Ingrese el nombre del jugador 3" />
+   <TextField fx:id="nom1" layoutX="129.0" layoutY="78.0" onAction="#saveNombre1" promptText="Nombre: " />
+   <TextField fx:id="nom2" layoutX="394.0" layoutY="78.0" onAction="#saveNombre2" promptText="Nombre: " />
+   <TextField fx:id="nom4" layoutX="394.0" layoutY="212.0" onAction="#saveNombre4" promptText="Nombre: " />
+   <TextField fx:id="nom3" layoutX="129.0" layoutY="212.0" onAction="#saveNombre3" promptText="Nombre: " />
+   <Label layoutX="355.0" layoutY="369.0" text="Nota: Para salir de la partida prescione ESC" />
 </AnchorPane>

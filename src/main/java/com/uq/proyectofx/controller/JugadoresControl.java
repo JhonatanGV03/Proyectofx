@@ -64,16 +64,12 @@ public class JugadoresControl {
         System.out.println("J4: "+nombre4);
     }
     @FXML
-    void jugar(ActionEvent event) {
+    void jugar(ActionEvent event) throws IOException {
         //Se carga la ventana de juego.
         Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/uq/proyectofx/imgs/pngwing.com.png")));
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/uq/proyectofx/juego.fxml"));
         Parent root;
-        try {
-            root = fxmlLoader.load();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        root = fxmlLoader.load();
         JuegoControl juegoControl = fxmlLoader.getController();
         Scene scene = new Scene(root);
         Stage stage = new Stage();

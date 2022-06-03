@@ -2,7 +2,6 @@ package com.uq.proyectofx.logic;
 
 public class Jugador {
     private String nombre;
-    private int turno;
     private int posicion;
 
     public Jugador(){

@@ -1,7 +1,6 @@
 package com.uq.proyectofx.logic;
 
 import javafx.scene.image.Image;
-
 import java.util.Objects;
 
 public class Dado {

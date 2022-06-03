@@ -1,60 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.shape.Line?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 
-<AnchorPane onKeyPressed="#salirJuego" prefHeight="423.0" prefWidth="662.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uq.proyectofx.controller.JuegoControl">
+<AnchorPane onKeyPressed="#salirJuego" prefHeight="423.0" prefWidth="662.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uq.proyectofx.controller.JuegoControl">
     <Button fx:id="btnDado" layoutX="488.0" layoutY="187.0" mnemonicParsing="false" onAction="#lanzarDado" text="Lanzar" />
-    <GridPane fx:id="tablaGrid" gridLinesVisible="true" layoutX="14.0" layoutY="32.0" prefHeight="360.0" prefWidth="366.0">
-      <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-      </columnConstraints>
-      <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      </rowConstraints>
+    <GridPane fx:id="tablaGrid" gridLinesVisible="true" layoutX="14.0" layoutY="32.0" prefHeight="360.0"
+              prefWidth="366.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <ImageView fx:id="imgJ1" fitHeight="27.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true"
+                   GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="TOP">
+            <Image url="@imgs/j1.png"/>
+        </ImageView>
+        <ImageView fx:id="imgJ3" fitHeight="27.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true"
+                   GridPane.halignment="RIGHT" GridPane.rowIndex="7" GridPane.valignment="TOP">
+            <Image url="@imgs/J3.png"/>
+        </ImageView>
+        <ImageView fx:id="imgJ2" fitHeight="27.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true"
+                   GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="BOTTOM">
+            <Image url="@imgs/J2.png"/>
+        </ImageView>
+        <ImageView fx:id="imgJ4" fitHeight="27.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true"
+                   GridPane.halignment="RIGHT" GridPane.rowIndex="7" GridPane.valignment="BOTTOM">
+            <Image url="@imgs/J4.png"/>
+        </ImageView>
     </GridPane>
     <Label fx:id="nomF1" layoutX="429.0" layoutY="267.0" prefHeight="25.0" prefWidth="110.0" />
     <Label fx:id="nomF2" layoutX="429.0" layoutY="292.0" prefHeight="25.0" prefWidth="110.0" />
     <Label fx:id="nomF4" layoutX="429.0" layoutY="342.0" prefHeight="25.0" prefWidth="110.0" />
     <Label fx:id="nomF3" layoutX="429.0" layoutY="317.0" prefHeight="25.0" prefWidth="110.0" />
     <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="397.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true">
-        <Image url="@imgs/person_64px.png" />
+        <Image url="@imgs/j1.png" />
     </ImageView>
     <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="397.0" layoutY="292.0" pickOnBounds="true" preserveRatio="true">
-        <Image url="@imgs/person_64px.png" />
+        <Image url="@imgs/J2.png" />
     </ImageView>
     <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="397.0" layoutY="317.0" pickOnBounds="true" preserveRatio="true">
-        <Image url="@imgs/person_64px.png" />
+        <Image url="@imgs/J3.png" />
     </ImageView>
     <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="397.0" layoutY="342.0" pickOnBounds="true" preserveRatio="true">
-        <Image url="@imgs/person_64px.png" />
+        <Image url="@imgs/J4.png" />
     </ImageView>
     <ImageView fx:id="imgDado" fitHeight="106.0" fitWidth="85.0" layoutX="422.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" smooth="false">
-        <Image url="@imgs/Dado1.png" />
+        <Image url="@imgs/default2.png" />
     </ImageView>
     <ImageView fx:id="imgDado2" fitHeight="106.0" fitWidth="85.0" layoutX="532.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" smooth="false">
-        <Image url="@imgs/Dado1.png" />
+        <Image url="@imgs/default2.png" />
     </ImageView>
    <Line endX="37.0" endY="120.0" layoutX="335.0" layoutY="254.0" startX="-23.0" startY="-64.0" stroke="#796b04" strokeWidth="3.0" />
    <Line endX="-120.0" endY="62.0" layoutX="345.0" layoutY="264.0" startX="-69.0" startY="-70.0" stroke="#796b04" strokeWidth="3.0" />
