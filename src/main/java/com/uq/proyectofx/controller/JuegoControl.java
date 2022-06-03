@@ -22,7 +22,7 @@ public class JuegoControl {
     public JuegoControl() {
     }
     public void initialize() {
-        recorrerTabla(); //llena el arraylist y el grid al momento de iniciar la ventana.
+       // recorrerTabla(); //llena el arraylist y el grid al momento de iniciar la ventana.
     }
 
     //Ids
@@ -74,7 +74,6 @@ public class JuegoControl {
                 for (int col = 7; col >= 0; col--) {
                     Label label = new Label(posiciones.getPosiciones().get(cont).toString());
                     tablaGrid.add(label, col, fila);
-                    System.out.println(posiciones.getPosiciones().get(cont).toString());
                     cont++;
                 }
             }else {
@@ -82,7 +81,6 @@ public class JuegoControl {
                 for (int col=0; col<8; col++){
                     Label label = new Label(posiciones.getPosiciones().get(cont).toString());
                     tablaGrid.add(label, col, fila);
-                    System.out.println(posiciones.getPosiciones().get(cont).toString());
                     cont++;
                 }
             }

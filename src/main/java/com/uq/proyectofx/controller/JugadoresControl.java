@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
@@ -16,12 +17,15 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class JugadoresControl {
-    private String nombre1 = "";
-    private String nombre2 = "";
-    private String nombre3 = "";
-    private String nombre4 = "";
+    private String nombre1 = "J1";
+    private String nombre2 = "J2";
+    private String nombre3 = "J3";
+    private String nombre4 = "J4";
 
     //IDs
+
+    @FXML
+    private Label aviso;
     @FXML
     private Button btnJugar;
     @FXML
@@ -65,25 +69,31 @@ public class JugadoresControl {
     }
     @FXML
     void jugar(ActionEvent event) throws IOException {
-        //Se carga la ventana de juego.
-        Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/uq/proyectofx/imgs/pngwing.com.png")));
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/uq/proyectofx/juego.fxml"));
-        Parent root;
-        root = fxmlLoader.load();
-        JuegoControl juegoControl = fxmlLoader.getController();
-        Scene scene = new Scene(root);
-        Stage stage = new Stage();
-        stage.setScene(scene);
-        stage.setTitle("Serpientes y Escaleras");
-        stage.setResizable(false);
-        stage.getIcons().add(image);
-        stage.show();
+        if(nom1.getText().isEmpty() || nom2.getText().isEmpty() || nom3.getText().isEmpty() || nom4.getText().isEmpty()){
+            aviso.setVisible(true);
+        }else {
+            //Se carga la ventana de juego.
+            Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/uq/proyectofx/imgs/pngwing.com.png")));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/uq/proyectofx/juego.fxml"));
+            Parent root;
+            root = fxmlLoader.load();
+            JuegoControl juegoControl = fxmlLoader.getController();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setTitle("Serpientes y Escaleras");
+            stage.setResizable(false);
+            stage.getIcons().add(image);
+            stage.show();
 
-        //Enviar nombres a juegoControl
-        juegoControl.llenarNombres(nombre1, nombre2, nombre3, nombre4);
+            //Enviar nombres a juegoControl
+            juegoControl.llenarNombres(nombre1, nombre2, nombre3, nombre4);
 
-        Stage stage2 = (Stage) this.btnJugar.getScene().getWindow();
-        stage2.close();
+            Stage stage2 = (Stage) this.btnJugar.getScene().getWindow();
+            stage2.close();
+        }
+
+
     }
     @FXML
     void salirVen(KeyEvent event) {
