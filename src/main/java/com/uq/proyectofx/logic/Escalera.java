@@ -15,6 +15,4 @@ public class Escalera {
     public int getPosFinal() {
         return posFinal;
     }
-
-
 }

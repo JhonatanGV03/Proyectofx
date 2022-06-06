@@ -17,10 +17,10 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class JugadoresControl {
-    private String nombre1 = "J1";
-    private String nombre2 = "J2";
-    private String nombre3 = "J3";
-    private String nombre4 = "J4";
+    private String nombre1;
+    private String nombre2;
+    private String nombre3;
+    private String nombre4;
 
     //IDs
 

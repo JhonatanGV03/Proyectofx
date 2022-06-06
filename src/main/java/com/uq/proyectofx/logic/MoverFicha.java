@@ -28,6 +28,7 @@ public class MoverFicha {
     }
 
     //Metodos
+    //Calcula la posicion final del jugador de acuerdo a su posicion inicial
     public int calcularPosFinal (){
 
         if (posInicial < 57){
@@ -47,6 +48,7 @@ public class MoverFicha {
         return posFinal;
     }
 
+    //Determina si el jugador se encuentra una escalera o serpiente en la posFinal
     public int determinarPosFinal(){
         if (escalera.getPosInicio() == posFinal){
             posFinal = escalera.getPosFinal();
@@ -71,6 +73,5 @@ public class MoverFicha {
     public void moverFicha(){
         jugador.setPosicion(determinarPosFinal());
     }
-
 
 }

@@ -28,12 +28,13 @@ public class GanadorControl {
     //Variables
 
     //Metodos
+    //metodo para traere el nombre del jugador ganador y mostrarlo en el textfield.
     public void setNomGanador(String nomGanador){
         txtField.setText("¡¡ FELICIDADES "+nomGanador+" GANASTE !!");
     }
 
-
     //OnAction
+    //Boton Jugar de nuevo. inicia la pantalla del menu principal para jugar de nuevo
     @FXML
     void jugar(ActionEvent event) throws IOException {
         Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/uq/proyectofx/imgs/pngwing.com.png")));
@@ -47,12 +48,17 @@ public class GanadorControl {
         stage.getIcons().add(image);
         stage.setResizable(false);
         stage.show();
-
+        Stage stage2 = (Stage) this.btnJugar.getScene().getWindow();
+        stage2.close();
     }
+
+    //Boton Salir. cierra la aplicacion
     @FXML
     void salir() {
         System.exit(0);
     }
+
+    //OnKeyPressed para salir cuando se presiona la tecla ESC.
     @FXML
     void teclaSalir(KeyEvent event) {
         if(event.getCode() == KeyCode.ESCAPE){

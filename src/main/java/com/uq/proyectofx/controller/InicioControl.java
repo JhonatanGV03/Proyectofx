@@ -23,9 +23,10 @@ public class InicioControl {
     private Button btnSalir;
 
     //OnAction
+    //Al presionar el botón Jugar se abre la ventana de Jugadores
     @FXML
     void jugadores(ActionEvent event) throws IOException {
-        //Pantalla de inicio
+        //Pantalla de jugadores
         Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/uq/proyectofx/imgs/pngwing.com.png")));
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/uq/proyectofx/jugadores.fxml"));
         Parent root = fxmlLoader.load();
@@ -41,11 +42,14 @@ public class InicioControl {
         Stage stage2 = (Stage) this.btnJugador.getScene().getWindow();
         stage2.close();
     }
+
+    //Al presionar el boton Salir se cierra la ventana
     @FXML
     void salir(ActionEvent event) {
-        Stage stage2 = (Stage) this.btnSalir.getScene().getWindow();
-        stage2.close();
+        System.exit(0);
     }
+
+    //Al presionar la tecla ESC se cierra la ventana (onKeyPressed)
     @FXML
     void teclaSalir(KeyEvent event) {
         if(event.getCode() == KeyCode.ESCAPE){

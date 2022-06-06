@@ -12,6 +12,8 @@ public class Dado {
         valor = (int) (Math.random()*6+1);  //Se obtiene un numero aleatorio entre 1 y 6.
         return valor;
     }
+
+    //Se envia la imagen correspondiente al valor del dado
     public Image getImagen(int valor){      //Se obtiene la imagen del dado segun el valor obtenido.
         Image uno = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/uq/proyectofx/imgs/Dado1.png")));
         Image dos = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/uq/proyectofx/imgs/Dado2.png")));
@@ -47,5 +49,4 @@ public class Dado {
         }
         return dado;
     }
-
 }

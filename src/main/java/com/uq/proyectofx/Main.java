@@ -1,13 +1,7 @@
 package com.uq.proyectofx;
 
-import com.uq.proyectofx.controller.GanadorControl;
-import com.uq.proyectofx.controller.JuegoControl;
-import com.uq.proyectofx.logic.Dado;
-import com.uq.proyectofx.logic.Jugador;
-import com.uq.proyectofx.logic.Posiciones;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
