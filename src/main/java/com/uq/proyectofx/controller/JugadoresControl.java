@@ -17,13 +17,13 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class JugadoresControl {
+    //Variables
     private String nombre1;
     private String nombre2;
     private String nombre3;
     private String nombre4;
 
     //IDs
-
     @FXML
     private Label aviso;
     @FXML

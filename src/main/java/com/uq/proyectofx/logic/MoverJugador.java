@@ -1,6 +1,6 @@
 package com.uq.proyectofx.logic;
 
-public class MoverFicha {
+public class MoverJugador {
     //Variables
     private Jugador jugador;
     private int posInicial;
@@ -19,7 +19,7 @@ public class MoverFicha {
     private Serpiente serpiente4 = new Serpiente(59, 42);
 
     //Constructor
-    public MoverFicha(Jugador jugador, int valorDado1, int valorDado2) {
+    public MoverJugador(Jugador jugador, int valorDado1, int valorDado2) {
         this.jugador = jugador;
         this.posInicial = jugador.getPosicion();
         this.valorDado1 = valorDado1;
@@ -30,7 +30,6 @@ public class MoverFicha {
     //Metodos
     //Calcula la posicion final del jugador de acuerdo a su posicion inicial
     public int calcularPosFinal (){
-
         if (posInicial < 57){
             if ((posInicial + valorDado1 + valorDado2) > 63){
                 posFinal = posInicial + valorDado1;
@@ -43,8 +42,8 @@ public class MoverFicha {
             if (posFinal > 63){
                 posFinal = posInicial;
             }
-
         }
+
         return posFinal;
     }
 
@@ -70,7 +69,7 @@ public class MoverFicha {
         return posFinal;
     }
 
-    public void moverFicha(){
+    public void moverPosJugador(){
         jugador.setPosicion(determinarPosFinal());
     }
 

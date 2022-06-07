@@ -142,7 +142,7 @@ public class JuegoControl {
 
             ganadorControl.setNomGanador(nombre.toUpperCase());
             stage.show();
-            Stage stage2 = (Stage) btnDado.getScene().getWindow();
+            Stage stage2 = (Stage) this.btnDado.getScene().getWindow();
             stage2.close();
         }
     }
@@ -157,8 +157,8 @@ public class JuegoControl {
             valorDado2 = determinarValorDado2(jugador1.getPosicion(), valorDado2, valorDado);  //Se determina el valor del dado2 del jugador 1
             setImg();                                          //Se cambia la imagen del dado segun el valor obtenido.
             System.out.print("J1: " + (jugador1.getPosicion()+1));
-            MoverFicha ficha1 = new MoverFicha (jugador1, valorDado, valorDado2); //Se crea un objeto de la clase MoverFicha
-            ficha1.moverFicha();                        //Se cambia la posicion del jugador con este metodo
+            MoverJugador ficha1 = new MoverJugador(jugador1, valorDado, valorDado2); //Se crea un objeto de la clase MoverFicha
+            ficha1.moverPosJugador();                        //Se cambia la posicion del jugador con este metodo
             moverFichas(jugador1.getPosicion());      //Se posiciona la ficha en el tablero
             System.out.println(" - "+(jugador1.getPosicion()+1));   //Se imprime la posicion del jugador
             gano(jugador1.getPosicion(), jugador1.getNombre());     //Se determina si el jugador gano
@@ -167,8 +167,8 @@ public class JuegoControl {
             valorDado2 = determinarValorDado2(jugador2.getPosicion(), valorDado2, valorDado);
             setImg();
             System.out.print("J2: " + (jugador2.getPosicion()+1));
-            MoverFicha ficha2 = new MoverFicha (jugador2, valorDado, valorDado2);
-            ficha2.moverFicha();
+            MoverJugador ficha2 = new MoverJugador(jugador2, valorDado, valorDado2);
+            ficha2.moverPosJugador();
             moverFichas(jugador2.getPosicion());
             System.out.println(" - "+(jugador2.getPosicion()+1));
             gano(jugador2.getPosicion(), jugador2.getNombre());
@@ -177,8 +177,8 @@ public class JuegoControl {
             valorDado2 = determinarValorDado2(jugador3.getPosicion(), valorDado2, valorDado);
             setImg();
             System.out.print("J3: " + (jugador3.getPosicion()+1));
-            MoverFicha ficha3 = new MoverFicha (jugador3, valorDado, valorDado2);
-            ficha3.moverFicha();
+            MoverJugador ficha3 = new MoverJugador(jugador3, valorDado, valorDado2);
+            ficha3.moverPosJugador();
             moverFichas(jugador3.getPosicion());
             System.out.println(" - "+(jugador3.getPosicion()+1));
             gano(jugador3.getPosicion(), jugador3.getNombre());
@@ -187,8 +187,8 @@ public class JuegoControl {
             valorDado2 = determinarValorDado2(jugador4.getPosicion(), valorDado2, valorDado);
             setImg();
             System.out.print("J4: " + (jugador4.getPosicion()+1));
-            MoverFicha ficha4 = new MoverFicha (jugador4, valorDado, valorDado2);
-            ficha4.moverFicha();
+            MoverJugador ficha4 = new MoverJugador(jugador4, valorDado, valorDado2);
+            ficha4.moverPosJugador();
             moverFichas(jugador4.getPosicion());
             System.out.println(" - "+(jugador4.getPosicion()+1));
             gano(jugador4.getPosicion(), jugador4.getNombre());
